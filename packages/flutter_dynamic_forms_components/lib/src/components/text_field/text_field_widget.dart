@@ -30,14 +30,17 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
   TextEditingController _controller = TextEditingController();
 
   VoidCallback _listener;
+  bool hideText;
 
   @override
   void initState() {
     super.initState();
-    _listener = () => widget.dispatcher(
+    _listener = () =>
+        widget.dispatcher(
           ChangeValueEvent(value: _controller.text, elementId: widget.id),
         );
     _controller.addListener(_listener);
+    hideText = widget.obscureText;
   }
 
   @override
@@ -58,10 +61,24 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextField(
-        decoration: InputDecoration(labelText: widget.label, errorText: widget.errorText),
+        decoration: InputDecoration(
+          labelText: widget.label,
+          errorText: widget.errorText,
+          disabledBorder: InputBorder.none,
+          filled: true,
+          fillColor: Color(0xFFf5f5f5),
+          suffixIcon: widget.obscureText ? IconButton(
+            icon: Icon(hideText ? Icons.visibility : Icons.visibility_off),
+            onPressed: () {
+              setState(() {
+                hideText = !hideText;
+              });
+            },
+          ) : null,
+        ),
         keyboardType: getTextInputType(widget.textInputType),
         controller: _controller,
-        obscureText: widget.obscureText,
+        obscureText: hideText,
       ),
     );
   }

@@ -3,56 +3,60 @@
     "id": "form1",
     "children": [
         {
+            "@name": "form",
+            "id": "ncuDigiunivSetupForm",
+            "children": [
+                {
+                    "@name": "label",
+                    "id": "title",
+                    "value": "Setup Attendance",
+                    "color": "0xFFF000000",
+                    "fontSize": "24",
+                    "fontWeight": "w500"
+                },
+                {
+                    "@name": "label",
+                    "id": "description",
+                    "fontSize": "16",
+                    "value": "Add your ERP username and password to track your Attendance on Collegium.\n\nWhen you give permission, our bots automatically and securely sign-in to ERP to periodically fetch your attendance."
+                },
+                {
+                    "@name": "textField",
+                    "id": "username",
+                    "label": "ERP Username",
+                    "value": "",
+                    "validations": [
+                        {
+                            "@name": "requiredValidation",
+                            "message": "Username is required"
+                        }
+                    ]
+                },
+                {
+                    "@name": "textField",
+                    "id": "password",
+                    "label": "ERP Password",
+                    "obscureText": "true",
+                    "validations": [
+                        {
+                            "@name": "requiredValidation",
+                            "message": "Password is required"
+                        }
+                    ]
+                },
+                {
+                    "@name": "checkBox",
+                    "id": "termsConditionCheckBox",
+                    "value": "false",
+                    "label": "I accept all the terms and conditions."
+                }
+            ]
+        },
+        {
             "@name": "formGroup",
             "id": "formGroup1",
             "name": "Form section 1",
             "children": [
-                {
-                    "@name": "textField",
-                    "id": "firstName",
-                    "label": "Enter your first name",
-                    "value": "John",
-                    "validations": [
-                        {
-                            "@name": "validation",
-                            "message": "Name is too long",
-                            "isValid": {
-                                "expression": "length(@firstName) < 15"
-                            }
-                        },
-                        {
-                            "@name": "requiredValidation",
-                            "message": "First name is required"
-                        }
-                    ]
-                },
-                {
-                    "@name": "textField",
-                    "id": "lastName",
-                    "label": "Enter your last name",
-                    "validations": [
-                        {
-                            "@name": "requiredValidation",
-                            "message": "Last name is required"
-                        }
-                    ]
-                },
-                {
-                    "@name": "label",
-                    "id": "fullNameLabel",
-                    "value": {
-                        "expression": "@firstName + (length(@firstName) > 0 && length(@lastName) > 0 ? \" \": \"\") + @lastName"
-                    }
-                },
-                {
-                    "@name": "label",
-                    "value": {
-                        "expression": "\"Welcome \" + @fullNameLabel + \"!\""
-                    },
-                    "isVisible": {
-                        "expression": "!@hideWelcomeCheckBox && length(@fullNameLabel) > 0"
-                    }
-                },
                 {
                     "@name": "checkBox",
                     "id": "hideWelcomeCheckBox",
