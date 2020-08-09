@@ -3,3 +3,13 @@ parentType: formElement
 properties:
   value:
     type: string
+  fontWeight:
+    type: fontWeight
+    isEnum: true
+    default: w400
+  color:
+    type: int
+    default: 0xFF000000
+  fontSize:
+    type: int
+    default: 14

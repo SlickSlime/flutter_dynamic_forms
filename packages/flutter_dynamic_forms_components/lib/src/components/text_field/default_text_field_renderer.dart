@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_dynamic_forms/flutter_dynamic_forms.dart';
 import 'package:flutter_dynamic_forms_components/flutter_dynamic_forms_components.dart'
-    as model;
+as model;
 
 import 'text_field_widget.dart';
 
 class DefaultTextFieldRenderer extends FormElementRenderer<model.TextField> {
   @override
-  Widget render(
-      model.TextField element,
+  Widget render(model.TextField element,
       BuildContext context,
       FormElementEventDispatcherFunction dispatcher,
       FormElementRendererFunction renderer) {
@@ -23,6 +22,7 @@ class DefaultTextFieldRenderer extends FormElementRenderer<model.TextField> {
       label: element.label,
       textInputType: element.inputType,
       dispatcher: dispatcher,
+      obscureText: element.obscureText,
     );
   }
 }

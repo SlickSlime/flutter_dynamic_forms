@@ -9,6 +9,7 @@ class TextFieldWidget extends StatefulWidget {
   final String label;
   final TextFieldInputType textInputType;
   final FormElementEventDispatcherFunction dispatcher;
+  final bool obscureText;
 
   const TextFieldWidget({
     Key key,
@@ -18,6 +19,7 @@ class TextFieldWidget extends StatefulWidget {
     this.dispatcher,
     this.errorText,
     this.textInputType,
+    this.obscureText,
   }) : super(key: key);
 
   @override
@@ -56,10 +58,10 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextField(
-        decoration: InputDecoration(
-            labelText: widget.label, errorText: widget.errorText),
+        decoration: InputDecoration(labelText: widget.label, errorText: widget.errorText),
         keyboardType: getTextInputType(widget.textInputType),
         controller: _controller,
+        obscureText: widget.obscureText,
       ),
     );
   }

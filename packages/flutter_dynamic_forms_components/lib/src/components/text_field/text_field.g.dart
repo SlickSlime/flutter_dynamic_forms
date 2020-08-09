@@ -6,6 +6,7 @@ import 'package:dynamic_forms/dynamic_forms.dart';
 class TextField extends FormElement {
   static const String inputTypePropertyName = 'inputType';
   static const String labelPropertyName = 'label';
+  static const String obscureTextPropertyName = 'obscureText';
   static const String validationsPropertyName = 'validations';
   static const String valuePropertyName = 'value';
 
@@ -22,6 +23,13 @@ class TextField extends FormElement {
   String get label =>
       labelProperty.value;
   Stream<String> get labelChanged => labelProperty.valueChanged;
+
+  Property<bool> get obscureTextProperty => properties[obscureTextPropertyName];
+  set obscureTextProperty(Property<bool> value) =>
+      registerProperty(obscureTextPropertyName, value);
+  bool get obscureText =>
+      obscureTextProperty.value;
+  Stream<bool> get obscureTextChanged => obscureTextProperty.valueChanged;
 
   Property<List<Validation>> get validationsProperty => properties[validationsPropertyName];
   set validationsProperty(Property<List<Validation>> value) =>

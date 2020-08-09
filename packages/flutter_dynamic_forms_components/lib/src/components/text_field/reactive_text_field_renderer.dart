@@ -26,6 +26,7 @@ class ReactiveTextFieldRenderer extends FormElementRenderer<model.TextField> {
           label: element.label,
           textInputType: element.inputType,
           dispatcher: dispatcher,
+          obscureText: element.obscureText,
         );
       },
     );

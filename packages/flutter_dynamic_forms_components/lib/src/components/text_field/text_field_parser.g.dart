@@ -31,6 +31,11 @@ class TextFieldParser<TTextField extends TextField>
         defaultValue: ParserNode.defaultString,
         isImmutable: true,
       )
+      ..obscureTextProperty = parserNode.getBoolProperty(
+        'obscureText',        
+        defaultValue: ParserNode.defaultFalse,
+        isImmutable: true,
+      )
       ..validationsProperty = parserNode.getChildrenProperty<Validation>(
           parent: textField,
           parser: parser,

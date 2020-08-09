@@ -2,6 +2,7 @@
 
 import 'package:flutter_dynamic_forms_components/flutter_dynamic_forms_components.dart';
 import 'package:dynamic_forms/dynamic_forms.dart';
+import 'font_weight.g.dart';
 
 class LabelParser<TLabel extends Label>
     extends FormElementParser<TLabel> {
@@ -20,6 +21,22 @@ class LabelParser<TLabel extends Label>
   ) {
     super.fillProperties(label, parserNode, parent, parser);
     label
+      ..colorProperty = parserNode.getIntProperty(
+        'color',      
+        defaultValue: () => 4278190080,
+        isImmutable: true,
+      )
+      ..fontSizeProperty = parserNode.getIntProperty(
+        'fontSize',      
+        defaultValue: () => 14,
+        isImmutable: true,
+      )
+      ..fontWeightProperty = parserNode.getEnumProperty(
+        'fontWeight',
+        FontWeight.values,
+        defaultValue: () => FontWeight.w400,
+        isImmutable: true,
+      )
       ..valueProperty = parserNode.getStringProperty(
         'value',
         defaultValue: ParserNode.defaultString,

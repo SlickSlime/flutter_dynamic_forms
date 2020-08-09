@@ -12,3 +12,6 @@ properties:
     default: text
   validations:
     type: validation[]
+  obscureText:
+    type: bool
+    default: false
