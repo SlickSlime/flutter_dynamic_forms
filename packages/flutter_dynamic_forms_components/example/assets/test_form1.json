@@ -65,132 +65,16 @@
                 },
                 {
                     "@name": "formGroup",
-                    "id": "formgroup2",
-                    "name": "Form section 2",
-                    "children": [
-                        {
-                            "@name": "singleSelectChipGroup",
-                            "id": "chipGroup1",
-                            "value": "-1",
-                            "choices": [
-                                {
-                                    "@name": "singleSelectChipChoice",
-                                    "label": "Chip Option 1",
-                                    "value": "1"
-                                },
-                                {
-                                    "@name": "singleSelectChipChoice",
-                                    "label": "Chip Option 2",
-                                    "value": "2"
-                                },
-                                {
-                                    "@name": "singleSelectChipChoice",
-                                    "label": "Chip Option 3",
-                                    "value": "3"
-                                },
-                                {
-                                    "@name": "singleSelectChipChoice",
-                                    "label": "Chip Option 4",
-                                    "value": "4"
-                                },
-                                {
-                                    "@name": "singleSelectChipChoice",
-                                    "label": "Chip Option 5 with a really long name",
-                                    "value": "5"
-                                },
-                                {
-                                    "@name": "singleSelectChipChoice",
-                                    "label": "Chip Option 6",
-                                    "value": "6"
-                                }
-                            ]
-                        },
-                        {
-                            "@name": "radioButtonGroup",
-                            "id": "radioGroup1",
-                            "value": "-1",
-                            "choices": [
-                                {
-                                    "@name": "radioButton",
-                                    "label": "Option 1",
-                                    "value": "1"
-                                },
-                                {
-                                    "@name": "radioButton",
-                                    "label": "Option 2",
-                                    "value": "2"
-                                },
-                                {
-                                    "@name": "radioButton",
-                                    "label": "Option 3",
-                                    "value": "3"
-                                },
-                                {
-                                    "@name": "radioButton",
-                                    "label": "Option 4",
-                                    "value": "4"
-                                }
-                            ]
-                        },
-                        {
-                            "@name": "multiSelectChipGroup",
-                            "id": "chipGroup2",
-                            "choices": [
-                                {
-                                    "@name": "multiSelectChipChoice",
-                                    "id": "multiChoice1",
-                                    "label": "Multi Chip Option 1",
-                                    "value": "1"
-                                },
-                                {
-                                    "@name": "multiSelectChipChoice",
-                                    "id": "multiChoice2",
-                                    "label": "Multi Chip Option 2",
-                                    "value": "2"
-                                },
-                                {
-                                    "@name": "multiSelectChipChoice",
-                                    "id": "multiChoice3",
-                                    "label": "Multi Chip Option 3",
-                                    "value": "3"
-                                },
-                                {
-                                    "@name": "multiSelectChipChoice",
-                                    "id": "multiChoice4",
-                                    "label": "Multi Chip Option 4",
-                                    "value": "4"
-                                },
-                                {
-                                    "@name": "multiSelectChipChoice",
-                                    "id": "multiChoice5",
-                                    "label": "Multi Chip Option 5 with a really long name",
-                                    "value": "5"
-                                },
-                                {
-                                    "@name": "multiSelectChipChoice",
-                                    "id": "multiChoice6",
-                                    "label": "Multi Chip Option 6",
-                                    "value": "6"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "@name": "formGroup",
                     "id": "formgroup3",
                     "name": "Form section 3",
                     "children": [
                         {
                             "@name": "dropdownButton",
                             "id": "dropdownButton1",
+                            "label": "Countries",
                             "value": "CD",
                             "choices": [
-                                {
-                                    "@name": "dropdownOption",
-                                    "label": "Afganistan",
-                                    "value": "AF"
-                                },
+
                                 {
                                     "@name": "dropdownOption",
                                     "label": "Argentina",

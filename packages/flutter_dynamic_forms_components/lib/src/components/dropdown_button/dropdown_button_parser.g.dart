@@ -19,5 +19,11 @@ class DropdownButtonParser<TDropdownButton extends DropdownButton>
     ElementParserFunction parser,
   ) {
     super.fillProperties(dropdownButton, parserNode, parent, parser);
+    dropdownButton
+      ..labelProperty = parserNode.getStringProperty(
+        'label',
+        defaultValue: ParserNode.defaultString,
+        isImmutable: true,
+      );
   }
 }

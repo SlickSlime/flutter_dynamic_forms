@@ -1,2 +1,5 @@
 type: dropdownButton
 parentType: singleSelectGroup<dropdownOption>
+properties:
+  label:
+    type: string

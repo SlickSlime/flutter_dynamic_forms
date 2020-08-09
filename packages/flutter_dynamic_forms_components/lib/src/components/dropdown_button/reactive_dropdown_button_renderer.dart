@@ -19,8 +19,17 @@ class ReactiveDropdownButtonRenderer
     return LazyStreamBuilder(
       streamFactory: () => MergeStream(streamsToReact),
       builder: (context, _) {
-        return Center(
-          child: DropdownButton<String>(
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: DropdownButtonFormField<String>(
+            decoration: InputDecoration(
+              labelText: element.label ?? '',
+              disabledBorder: InputBorder.none,
+              filled: true,
+              fillColor: Color(0xFFf5f5f5),
+            ),
+            isExpanded: true,
+            hint: Text(element.label ?? ''),
             value: element.value,
             onChanged: (String newValue) => dispatcher(
               ChangeValueEvent(
